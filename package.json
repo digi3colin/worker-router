@@ -1,0 +1,31 @@
+{
+  "name": "@komino/worker-router",
+  "version": "0.0.5",
+  "description": "The router for cloudflare worker",
+  "main": "classes/Router.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/digi3colin/worker-router.git"
+  },
+  "keywords": [
+    "router",
+    "cloudflare",
+    "webworker",
+    "worker"
+  ],
+  "author": "Colin Leung",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/digi3colin/worker-router/issues"
+  },
+  "homepage": "https://github.com/digi3colin/worker-router#readme",
+  "dependencies": {
+    "path-to-regexp": "^6.1.0"
+  },
+  "devDependencies": {
+    "jest": "^25.1.0"
+  }
+}
