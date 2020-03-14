@@ -64,6 +64,9 @@ class Router {
   }
 
   async lookup(request){
+    //append params to request.
+    request.params = request.params || {};
+
     const url = new URL(request.url);
     const path = url.pathname;
     const method = request.method.toUpperCase();
@@ -86,7 +89,6 @@ class Router {
         const values = route.re.exec(path);
 
         //inject request.params
-        request.params = request.params || {};
         route.keys.forEach((x, i) => {
           request.params[ x.name ] = values[ i + 1 ];
         });
