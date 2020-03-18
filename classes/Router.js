@@ -66,6 +66,9 @@ class Router {
   async lookup(request){
     //append params to request.
     request.params = request.params || {};
+    if(!request.params){
+      throw new Error('Router: Request cannot add params.');
+    }
 
     const url = new URL(request.url);
     const path = url.pathname;
@@ -90,6 +93,7 @@ class Router {
 
         //inject request.params
         route.keys.forEach((x, i) => {
+          if(x.name ==='__proto__' || x.name === 'prototype' || x.name === 'constructor')throw new Error(`Invalid key: ${x.name}`);
           request.params[ x.name ] = values[ i + 1 ];
         });
 
@@ -103,4 +107,7 @@ class Router {
   }
 }
 Router.REQUEST_METHOD = REQUEST_METHOD;
+
+Object.freeze(Router);
+Object.freeze(Router.prototype);
 module.exports = Router;

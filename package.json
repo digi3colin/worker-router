@@ -1,6 +1,6 @@
 {
   "name": "@komino/worker-router",
-  "version": "0.0.6",
+  "version": "0.0.8",
   "description": "The router for cloudflare worker",
   "main": "classes/Router.js",
   "scripts": {
