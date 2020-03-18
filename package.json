@@ -25,7 +25,5 @@
   "dependencies": {
     "path-to-regexp": "^6.1.0"
   },
-  "devDependencies": {
-    "jest": "^25.1.0"
-  }
+  "devDependencies": {}
 }
