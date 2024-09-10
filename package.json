@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/digi3colin/worker-router#readme",
   "dependencies": {
-    "path-to-regexp": "^6.1.0"
+    "path-to-regexp": "^8.0.0"
   },
   "devDependencies": {}
 }
